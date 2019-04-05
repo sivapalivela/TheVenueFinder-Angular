@@ -1,0 +1,147 @@
+export class Tile {
+    text: string;
+    image: string;
+    color: string;
+}
+
+export const cuisinelist1:Tile[] = [
+    {
+        text:"American",
+        image:"assets/images/american.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Arabian",
+        image:"assets/images/mediterranean.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Asian European",
+        image:"assets/images/kerala.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Bakery",
+        image:"assets/images/nouvelle.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Beverages",
+        image:"assets/images/finland.jpg",
+        color:"yellow"
+    },
+]
+
+export const cuisinelist2:Tile[]=[
+    {
+        text:"Brazilian",
+        image:"assets/images/western-cuisine.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Burger",
+        image:"assets/images/international.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Cafe",
+        image:"assets/images/greek.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Chinese",
+        image:"assets/images/chinese.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Filipino",
+        image:"assets/images/japanese.jpg",
+        color:"yellow"
+    },
+]
+export const cuisinelist3:Tile[]=[
+    {
+        text:"Food",
+        image:"assets/images/india.jpg",
+        color:"yellow"
+    },
+    {
+        text:"French",
+        image:"assets/images/frenchcuisine.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Grill",
+        image:"assets/images/vietnam.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Indian",
+        image:"assets/images/india.jpg",
+        color:"yellow"
+    },
+    {
+        text:"International",
+        image:"assets/images/thailand.png",
+        color:"yellow"
+    },
+    {
+        text:"Italian",
+        image:"assets/images/italian-cuisine.jpg",
+        color:"yellow"
+    },
+]
+export const cuisinelist4:Tile[]=[
+    {
+        text:"Japanese",
+        image:"assets/images/newzealand.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Korean",
+        image:"assets/images/korean.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Lebanese",
+        image:"assets/images/lebanese.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Lebanese Arabian",
+        image:"assets/images/frenchcuisine.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Mexican",
+        image:"assets/images/mexican.jpg",
+        color:"yellow"
+    },
+]
+export const cuisinelist5:Tile[]=[
+    {
+        text:"Pizza",
+        image:"assets/images/italian-cuisine.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Sandwich",
+        image:"assets/images/african.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Seafood",
+        image:"assets/images/western-cuisine.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Steak",
+        image:"assets/images/iceland.jpg",
+        color:"yellow"
+    },
+    {
+        text:"Sushi",
+        image:"assets/images/african.jpg",
+        color:"yellow"
+    },
+]

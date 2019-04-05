@@ -1,21 +1,50 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
-</div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
+<mat-toolbar color="primary" class="matool" fxHide.xs fxHide.sm fxHide.md>
+        <div class="movel" fxFlex></div>
+        <span class="header" fxFlex>The Venue Finder</span> 
+        <input type="text" fxFlex placeholder="Search" class="modinput" />
+        <span type="submit" class="iconicstroke-magnifying-glass modicon"></span>
+        <span class="spacer" fxHide.xs ></span>
+        <span class="neededmargin" fxFlex><a href="#" class="remove-default">Home</a></span>
+        <span class="neededmargin" fxFlex><a href="#restaurant" class="remove-default">Find Restaurants</a></span>
+        <span class="neededmargin" fxFlex><a href="#cuisi" class="remove-default">Cuisines</a></span>
+        <span class="neededmargin" fxFlex>About us</span>
+        <mat-list class="neededmargins" fxFlex>
+            <mat-list-item>
+                <img matListAvatar src="assets/images/user-icon.png" alt="Profile"/>
+                <h3 matLine class="user" (click)="openLogin()">User</h3>
+            </mat-list-item>
+        </mat-list>
+        <div class="mover" fxFlex></div>
+</mat-toolbar>
 
+<button mat-icon-button [matMenuTriggerFor]="menu" fxHide.lg>
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>home</mat-icon>
+          <span>Home</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>restaurant</mat-icon>
+          <span>Find Restaurants</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>money</mat-icon>
+          <span>Cuisines</span>
+        </button>
+        </mat-menu>
+<span class="hevu" fxHide.lg>The Venue Finder</span>
+<app-here-map
+    #map
+    appId="oQcTqOvtBrldQ9r8RHCo"
+    appCode="XobmvFUAYDjf0pCAceHNdA"
+    lat="37.7397"
+    lng="-121.4252"
+    width="100%"
+    height="500px">
+</app-here-map>
+<app-show-only-some (disable)="disabled_executed($event)" id="restaurant"></app-show-only-some>
+<app-cuisines-list [hidden]="nill" id="cuisi"></app-cuisines-list>
 <router-outlet></router-outlet>
+<app-footer></app-footer>

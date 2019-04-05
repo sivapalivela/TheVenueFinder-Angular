@@ -1,0 +1,35 @@
+@import url(http://weloveiconfonts.com/api/?family=brandico);
+[class*="brandico-"]:before {
+    font-family: 'brandico', sans-serif;
+}
+
+.ul-style{
+    list-style-type: none;
+}
+ul>li{
+    display: inline;
+    margin: 2%;
+    font-size: 1.25em;
+    color: cornflowerblue;
+}
+.dark-bg{
+    background: #252a33;
+}
+
+.main-block{
+    padding: 90px 0;
+}
+
+footer{
+    position: relative;
+    display: block;
+    box-sizing: inherit;
+}
+
+.copyright{
+    color: white;
+    font-family: 'Orbitron','sans-serif';
+    font-weight: bold;
+    font-size:1.5em;text-align: center;
+    letter-spacing: 2px;
+}

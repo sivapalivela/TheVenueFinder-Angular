@@ -1,0 +1,113 @@
+<div style="background-color:whitesmoke;" *ngIf="component_disable">
+  <h2 class="header">Featured Restaurants You Must Visit</h2>
+  <p class="divider"></p>
+  <div class="maindiv">
+    <!-- Featured 1 -->
+    <div class="det-style">
+        <img src="assets/images/featured2.jpg" alt="Restaurant-image" width="350px" height="250px"/>
+
+        <div class="modify">
+          <h3 class="align">Hobbing Korean Desert Cafe</h3>
+
+          <span class="rest_id">ID : 18255654</span>
+
+          <h4 class="h4header">Cafe, Korean, Desserts</h4>
+
+          <span class="rating"><mat-icon style="font-size:1.10em;text-align: center;">star</mat-icon> 4.5</span>
+
+          <p class="font-apply">Currency : Botswana Pula(P)</p>
+          <p class="font-apply">Average cost for two : 600$</p>
+          <p class="font-apply" style="float:right;margin-top:0px;">Online Delivery <span class="fontawesome-truck" color=""></span> : No</p>
+          <p class="font-apply">Table Booking <span class="maki-restaurant "></span> : No</p>
+          <p class="font-apply" style="float:right;margin-top:0px;">Rating-Text : Excellent</p>
+          <p class="font-apply">Votes <span class="fontawesome-thumbs-up"></span>:118</p>
+
+      </div>
+    </div>
+    <!-- Featured 2 -->
+    <div class="det-style">
+        <img src="assets/images/featured2.jpg" alt="Restaurant-image" width="350px" height="250px"/>
+
+        <div class="modify">
+          <h3 class="align">NIU by Vikings</h3>
+
+          <span style="color:#999;font-weight:900;font-size:1.0em;margin-top: 4%;float: right;">ID : 6315438</span>
+
+          <h4 class="h4header">Seafood, American, Mediterranean</h4>
+
+          <span class="rating"><mat-icon style="font-size:1.10em;text-align: center;">star</mat-icon> 4.7</span>
+
+          <p class="font-apply">Currency : Botswana Pula(P)</p>
+          <p class="font-apply">Average cost for two : 3000$</p>
+          <p class="font-apply" style="float:right;margin-top:0px;">Online Delivery <span class="fontawesome-truck" color=""></span> : No</p>
+          <p class="font-apply">Table Booking <span class="maki-restaurant "></span> : Yes</p>
+          <p class="font-apply" style="float:right;margin-top:0px;">Rating-Text : Excellent</p>
+          <p class="font-apply">Votes <span class="fontawesome-thumbs-up"></span>:535</p>
+
+      </div>
+    </div>
+    <!--Featured 3-->
+    <div class="det-style">
+        <img src="assets/images/featured3.jpg" alt="Restaurant-image" width="350px" height="250px"/>
+
+        <div class="modify">
+          <h3 class="align">Wildflour Cafe + Bakery</h3>
+
+          <span class="rest_id">ID : 6308205</span>
+
+          <h4 class="h4header">Cafe, Bakery, American, Italian</h4>
+
+          <span class="rating" style="background-color:lightseagreen;border:2px solid lightseagreen;"><mat-icon style="font-size:1.10em;text-align: center;">star</mat-icon> 4.4</span>
+
+          <p class="font-apply">Currency : Botswana Pula(P)</p>
+          <p class="font-apply">Average cost for two : 1500$</p>
+          <p class="font-apply" style="float:right;margin-top:0px;">Online Delivery <span class="fontawesome-truck"></span> : No</p>
+          <p class="font-apply">Table Booking <span class="maki-restaurant "></span> : Yes</p>
+          <p class="font-apply" style="float:right;margin-top:0px;">Rating-Text : Very Good</p>
+          <p class="font-apply">Votes <span class="fontawesome-thumbs-up"></span>: 392</p>
+
+      </div>
+    </div>
+  </div>
+  <div class="butt">
+    <button mat-raised-button color="primary" (click)="get_all_restaurants()" style="font-weight:bold;">View All</button>
+  </div>
+</div>
+
+<!--The Below code is for displaying Full Restaurant List-->
+<div style="background-color:whitesmoke;" *ngIf="!component_disable">
+  <h2 class="header">All Restaurants</h2>
+  <p class="divider"></p>
+  <div class="less-view">
+    <button mat-raised-button color="primary" (click)="get_minimal()" style="font-weight:bold;">View Less</button>
+  </div>
+  <div class="less-view v1" fxLayout="row" fxLayout.xs="column">
+    <button mat-raised-button color="primary" (click)="get_rate()" style="font-weight:bold;margin-bottom: 2%;">Sort by Rating</button>
+      <button mat-raised-button color="primary" (click)="get_avgcost()" style="font-weight:bold;margin-left: 2%;margin-right: 2%;margin-bottom: 2%;">Sort by Average Cost for Two</button>
+      <button mat-raised-button color="primary" (click)="get_vote()" style="font-weight:bold;margin-bottom: 2%;">Sort by Votes</button>
+  </div>
+  <div class="maindiv maindiv1">
+    <!-- All -->
+    <div class="det-style" *ngFor="let res of restaurants_list">
+        <img src="assets/images/featured2.jpg" alt="Restaurant-image" width="350px" height="250px"/>
+
+        <div class="modify">
+          <h3 class="align">{{res.Restaurant_Name}}</h3>
+
+          <span class="rest_id">ID : {{res.Restaurant_ID}}</span>
+
+          <h4 class="h4header">{{res.Cuisines}}</h4>
+
+          <span class="rating"><mat-icon style="font-size:1.10em;text-align: center;">star</mat-icon> {{res.Aggregate_rating}}</span>
+
+          <p class="font-apply">Currency : {{res.Currency}}</p>
+          <p class="font-apply">Average cost for two : {{res.Average_Cost_for_two}}$</p>
+          <p class="font-apply" style="float:right;margin-top:0px;">Online Delivery <span class="fontawesome-truck" color=""></span> : {{res.Has_Online_delivery}}</p>
+          <p class="font-apply">Table Booking <span class="maki-restaurant "></span> : {{res.Has_Table_booking}}</p>
+          <p class="font-apply" style="float:right;margin-top:0px;">Rating-Text : {{res.Rating_text}}</p>
+          <p class="font-apply">Votes <span class="fontawesome-thumbs-up"></span>:{{res.Votes}}</p>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,47 @@
+<div>
+  <h1 class="header">What do you need to find ?</h1>
+  <p class="divider"></p>
+  <p class="info">Here is a List of Cuisines to Choose From</p>
+  <div fxLayout="row wrap" fxLayoutGap="20px" class="grid-list">
+    <mat-list fxFlex>
+        <mat-list-item *ngFor="let cuisine of CuisineData1" (click)="get_it_now(cuisine.text)">
+          <img matListAvatar src="{{cuisine.image}}" alt="...">
+          <h3 matLine><span class="cuistext">{{cuisine.text}}</span></h3>
+        </mat-list-item>
+    </mat-list>
+
+    <mat-list fxFlex>
+        <mat-list-item *ngFor="let cuisine of CuisineData2" (click)="get_it_now(cuisine.text)">
+          <img matListAvatar src="{{cuisine.image}}" alt="...">
+          <h3 matLine><span class="cuistext"> {{cuisine.text}}</span> </h3>
+        </mat-list-item>
+    </mat-list>
+
+    <mat-list fxFlex>
+        <mat-list-item *ngFor="let cuisine of CuisineData3" (click)="get_it_now(cuisine.text)">
+          <img matListAvatar src="{{cuisine.image}}" alt="...">
+          <h3 matLine><span class="cuistext">{{cuisine.text}}</span></h3>
+        </mat-list-item>
+    </mat-list>
+
+    <mat-list fxFlex>
+        <mat-list-item *ngFor="let cuisine of CuisineData4" (click)="get_it_now(cuisine.text)">
+          <img matListAvatar src="{{cuisine.image}}" alt="...">
+          <h3 matLine><span class="cuistext">{{cuisine.text}}</span></h3>
+        </mat-list-item>
+    </mat-list>
+
+    <mat-list fxFlex>
+        <mat-list-item *ngFor="let cuisine of CuisineData5" (click)="get_it_now(cuisine.text)">
+          <img matListAvatar src="{{cuisine.image}}" alt="...">
+          <h3 matLine><span class="cuistext">{{cuisine.text}}</span></h3>
+        </mat-list-item>
+    </mat-list>
+  </div>
+</div>
+<div class="butt">
+  <button mat-mini-fab color="primary" (click)="close_or_open()">X</button>
+</div> 
+
+<mat-divider></mat-divider>
+<app-tablecomponent [selected_Cuisine]="selected_cuisine" [length]="length" [hidden]="!close"></app-tablecomponent>

@@ -1,0 +1,45 @@
+table {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+.info{
+  font-family: 'Roboto','sans-serif';
+  font-size: 1.5em;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.header{
+  font-family: 'Orbitron','sans-serif';
+  font-size: 1.4em;
+  font-weight: bold;
+  text-align: center;
+  padding-top: 2%;
+}
+
+.divider{
+  width: 15%;
+  margin-left: auto;
+  margin-right: auto;
+  border-bottom: 3px solid #3f51b5;
+}
+
+.informatica{
+  text-align: center;
+  font-family: 'Roboto','sans-serif';
+  color: forestgreen;
+}
+
+.padding-needed{
+  padding-bottom:3%; 
+}
+
+.not_available{
+  color: crimson;
+  font-family: 'Roboto','sans-serif';
+  font-weight: bold;
+  font-size: 1.25em;
+  text-align:center;
+}

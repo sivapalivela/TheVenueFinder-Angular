@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One|Lobster+Two|Noto+Sans+TC|Orbitron|Oswald|Roboto|Yanone+Kaffeesatz');
+html,body,h1,h2,h3,div{
+    padding: 0px;
+    margin: 0px;
+}

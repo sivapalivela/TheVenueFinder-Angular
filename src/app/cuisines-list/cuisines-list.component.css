@@ -1,0 +1,56 @@
+.grid-list{
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.info{
+    font-family: 'Roboto','sans-serif';
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.header{
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 1%;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.divide{
+    width:20%;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.mats-grid{
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.divider{
+    color: #3f51b5;
+    width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 3px solid #3f51b5;
+}
+
+.cuistext{
+    font-weight: bold;
+    font-family: 'Roboto','sans-serif';
+}
+
+.cuistext:hover{
+    cursor: pointer;
+}
+
+.butt{
+    display: flex;
+    justify-content: center;
+    padding-top: 1%;
+    padding-bottom: 2%;
+ }
